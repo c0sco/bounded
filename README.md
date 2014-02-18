@@ -13,6 +13,8 @@ Add a blackhole.conf include line in the options section of your named.conf, lik
 
 If you use a path other than /etc/namedb/blackhole.conf, specify the file with the -o flag. bounded.py will initialize the file in the proper format, no need to create the file yourself. See bounded.py -h for more information.
 
+bounded.py relies on memcached to keep track of the IPs and zones it sees. This is for a number reasons, including auto-expiration (coming soon), and sharing data between name servers.
+
 Usage
 -----
 All you need to get started is to specify the interface to listen for packets on.
